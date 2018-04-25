@@ -8,8 +8,13 @@ import VueResource from 'vue-resource'
 
 Vue.config.productionTip = false
 
+
 Vue.use(VueKonva)
 Vue.use(VueResource);
+
+Vue.http.options.root = 'http://localhost:9000/';
+Vue.http.options.emulateJSON = true;
+Vue.http.options.emulateHTTP = true;
 
 /* eslint-disable no-new */
 new Vue({
